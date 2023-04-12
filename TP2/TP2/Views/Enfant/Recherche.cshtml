@@ -1,11 +1,11 @@
-﻿@model List<Enfant>
+﻿@model TP2.ViewModel.PageRechercheViewModel;
 
 <div class="row mt-5">
 
     <div class="col-8">
         <h1>LISTE DES MODÈLES</h1>
         <div class="row">
-            @foreach (var item in Model)
+            @foreach (var item in Model.Resultat)
             {
                 <div class="gallery col-lg-3 col-12">
                     <a href="~/enfant/detail/@(item.Id)" style="text-decoration: none; color: white;">
@@ -24,29 +24,76 @@
 
         <h4>Rechercher par mots-clés</h4>
         <form action="https://www.w3schools.com/action_page.php" method="post">
-            <input type="text" id="motCle" name="motCle" placeholder="Saisir un mot-clé">
+            <input type="text" id="motCle" name="MotsCles" placeholder="Saisir un mot-clé" value="@Model.Criteres.MotsCles">
             <h4> <br> Nombre de kilomêtrage</h4>
             <div class="row">
                 <div class="col-6">
-                    <input type="number" id="min" name="minimum" placeholder="Min" step="1000">
+                    <input type="number" id="min" name="MinNbKilo" value="@Model.Criteres.MinNbKilo" placeholder="Min" step="1000">
                 </div>
                 <div class="col-6">
-                    <input type="number" id="max" name="maximum" placeholder="Max" step="1000">
+                    <input type="number" id="max" name="MaxNbKilo" value="@Model.Criteres.MaxNbKilo" placeholder="Max" step="1000">
                 </div>
             </div>
             <h4> <br> Modèles vedettes</h4>
-            <select name="choice" id="selection">
-                <option value="">--Please choose an option--</option>
-                <option value="oui">Oui</option>
-                <option value="non">Non</option>
-                <option value="peuImporte">Peu importe</option>
+            <select name="ChoixPourModelVedette" id="selection">
+                @if(Model.Criteres.ChoixPourModelVedette == "Oui")
+                {
+                     <option selected value="Oui">Oui</option>
+                }
+                else
+                {
+                    <option value="Oui">Oui</option>
+                }
+
+                 @if(Model.Criteres.ChoixPourModelVedette == "Non")
+                {
+                     <option selected value="Non">Non</option>
+                }
+                else
+                {
+                    <option value="Non">Non</option>
+                }
+
+                 @if(Model.Criteres.ChoixPourModelVedette == "PeuImporte")
+                {
+                     <option selected value="PeuImporte">Peu importe</option>
+                }
+                else
+                {
+                    <option value="PeuImporte">Peu importe</option>
+                }                           
             </select>
+
             <h4> <br> Marques</h4>
-            <input type="checkbox" id="nissan" name="nissan" value="nissan">
+
+            @if (Model.Criteres.EstUnNissan)
+            {
+                 <input type="checkbox" checked name="EstUnNissan" value="true" class="form-check-input">
+            }
+            else
+            {
+                 <input type="checkbox" name="EstUnNissan" value="true" class="form-check-input">
+            }          
             <label for="nissan"> NISSAN</label><br>
-            <input type="checkbox" id="toyota" name="toyota" value="toyota">
+
+            @if (Model.Criteres.EstUnNissan)
+            {
+                 <input type="checkbox" checked name="EstUnToyota" value="true" class="form-check-input">
+            }
+            else
+            {
+                 <input type="checkbox" name="EstUnToyota" value="true" class="form-check-input">
+            }              
             <label for="toyota"> TOYOTA</label><br>
-            <input type="checkbox" id="honda" name="honda" value="honda">
+
+            @if (Model.Criteres.EstUnNissan)
+            {
+                 <input type="checkbox" checked name="EstUnHonda" value="true" class="form-check-input">
+            }
+            else
+            {
+                 <input type="checkbox" name="EstUnHonda" value="true" class="form-check-input">
+            }           
             <label for="honda"> HONDA</label><br><br>
 
             <div class="row">
