@@ -1,0 +1,89 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Prog Project\\TP2\\TP2\\wwwroot\\css\\styles.css",
+      "PackagePath": "staticwebassets\\css\\styles.css"
+    },
+    {
+      "Id": "C:\\Prog Project\\TP2\\TP2\\wwwroot\\images\\180sx.jpg",
+      "PackagePath": "staticwebassets\\images\\180sx.jpg"
+    },
+    {
+      "Id": "C:\\Prog Project\\TP2\\TP2\\wwwroot\\images\\300zx.jpg",
+      "PackagePath": "staticwebassets\\images\\300zx.jpg"
+    },
+    {
+      "Id": "C:\\Prog Project\\TP2\\TP2\\wwwroot\\images\\ae86.jpg",
+      "PackagePath": "staticwebassets\\images\\ae86.jpg"
+    },
+    {
+      "Id": "C:\\Prog Project\\TP2\\TP2\\wwwroot\\images\\background.jpg",
+      "PackagePath": "staticwebassets\\images\\background.jpg"
+    },
+    {
+      "Id": "C:\\Prog Project\\TP2\\TP2\\wwwroot\\images\\caroussel2.jpg",
+      "PackagePath": "staticwebassets\\images\\caroussel2.jpg"
+    },
+    {
+      "Id": "C:\\Prog Project\\TP2\\TP2\\wwwroot\\images\\caroussel3.jpg",
+      "PackagePath": "staticwebassets\\images\\caroussel3.jpg"
+    },
+    {
+      "Id": "C:\\Prog Project\\TP2\\TP2\\wwwroot\\images\\carrousel1.jpg",
+      "PackagePath": "staticwebassets\\images\\carrousel1.jpg"
+    },
+    {
+      "Id": "C:\\Prog Project\\TP2\\TP2\\wwwroot\\images\\carroussel4.png",
+      "PackagePath": "staticwebassets\\images\\carroussel4.png"
+    },
+    {
+      "Id": "C:\\Prog Project\\TP2\\TP2\\wwwroot\\images\\japon.png",
+      "PackagePath": "staticwebassets\\images\\japon.png"
+    },
+    {
+      "Id": "C:\\Prog Project\\TP2\\TP2\\wwwroot\\images\\jdmBackground.png",
+      "PackagePath": "staticwebassets\\images\\jdmBackground.png"
+    },
+    {
+      "Id": "C:\\Prog Project\\TP2\\TP2\\wwwroot\\images\\logoHonda.png",
+      "PackagePath": "staticwebassets\\images\\logoHonda.png"
+    },
+    {
+      "Id": "C:\\Prog Project\\TP2\\TP2\\wwwroot\\images\\logoNissan.png",
+      "PackagePath": "staticwebassets\\images\\logoNissan.png"
+    },
+    {
+      "Id": "C:\\Prog Project\\TP2\\TP2\\wwwroot\\images\\logoToyota.png",
+      "PackagePath": "staticwebassets\\images\\logoToyota.png"
+    },
+    {
+      "Id": "C:\\Prog Project\\TP2\\TP2\\wwwroot\\images\\s15.jpg",
+      "PackagePath": "staticwebassets\\images\\s15.jpg"
+    },
+    {
+      "Id": "C:\\Prog Project\\TP2\\TP2\\wwwroot\\images\\skylineR32.jpg",
+      "PackagePath": "staticwebassets\\images\\skylineR32.jpg"
+    },
+    {
+      "Id": "C:\\Prog Project\\TP2\\TP2\\wwwroot\\images\\supra.jpg",
+      "PackagePath": "staticwebassets\\images\\supra.jpg"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.TP2.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.build.TP2.props",
+      "PackagePath": "build\\TP2.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.TP2.props",
+      "PackagePath": "buildMultiTargeting\\TP2.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildTransitive.TP2.props",
+      "PackagePath": "buildTransitive\\TP2.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

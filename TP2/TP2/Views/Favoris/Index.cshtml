@@ -1,0 +1,67 @@
+﻿<div class="row mt-5">
+    <div class="col text-center text-uppercase">
+        <h2>YOUR FAVOURITE CARS</h2>
+    </div>
+</div>
+
+<div class="row mt-5">
+    <p class="fav">VOUS AVEZ<span style="color: red;"> 4 </span>MODÈLES FAVORIS!</p>
+</div>
+
+<div class="row mt-5">
+    <table class="table-striped table">
+        <thead style="background-color: gray;">
+            <tr><th>IMAGE</th><th>MODÈLE</th><th>MARQUE</th><th>KILOMETRAGE</th><th></th></tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>   <img class="img-fluid" style="width: 200px;" src="images/skylineR32.jpg" alt="Nissan skyline r32"></td>
+                <td> <a href="~/enfant/detail" style="text-decoration: none; color: black;">SKYLINE</a></td>
+                <td>NISSAN</td>
+                <td>39 000 km</td>
+                <td>
+                    <form action="https://www.w3schools.com/action_page.php" method="post">
+                        <input type="hidden" id="favouriteId" name="nom" value="skyline">
+                        <button type="submit" class="btn btn-danger">Remove &nbsp;&nbsp;<i class="fa-sharp fa-solid fa-trash"></i> </button>
+                    </form>
+                </td>
+            </tr>
+            <tr>
+                <td>   <img class="img-fluid" style="width: 200px;" src="images/180sx.jpg" alt="Nissan skyline r32"></td>
+                <td> <a href="~/enfant/detail" style="text-decoration: none; color: black;">180SX</a></td>
+                <td>NISSAN</td>
+                <td>67 000 km</td>
+                <td>
+                    <form action="https://www.w3schools.com/action_page.php" method="post">
+                        <input type="hidden" id="favouriteId" name="nom" value="180sx">
+                        <button type="submit" class="btn btn-danger">Remove &nbsp;&nbsp;<i class="fa-sharp fa-solid fa-trash"></i> </button>
+                    </form>
+                </td>
+            </tr>
+            <tr>
+                <td>   <img class="img-fluid" style="width: 200px;" src="images/300zx.jpg" alt="Nissan skyline r32"></td>
+                <td> <a href="~/enfant/detail" style="text-decoration: none; color: black;">300ZX</a></td>
+                <td>NISSAN</td>
+                <td>98 000 km</td>
+                <td>
+                    <form action="https://www.w3schools.com/action_page.php" method="post">
+                        <input type="hidden" id="favouriteId" name="nom" value="300zx">
+                        <button type="submit" class="btn btn-danger">Remove &nbsp;&nbsp;<i class="fa-sharp fa-solid fa-trash"></i> </button>
+                    </form>
+                </td>
+            </tr>
+            <tr>
+                <td>   <img class="img-fluid" style="width: 200px;" src="images/s15.jpg" alt="Nissan skyline r32"></td>
+                <td> <a href="~/enfant/detail" style="text-decoration: none; color: black;">SILVIA S15</a></td>
+                <td>NISSAN</td>
+                <td>27 000 km</td>
+                <td>
+                    <form action="https://www.w3schools.com/action_page.php" method="post">
+                        <input type="hidden" id="favouriteId" name="nom" value="s15">
+                        <button type="submit" class="btn btn-danger">Remove &nbsp;&nbsp;<i class="fa-sharp fa-solid fa-trash"></i> </button>
+                    </form>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

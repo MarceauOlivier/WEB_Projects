@@ -1,0 +1,82 @@
+﻿@model List<Enfant>
+
+<div class="row mt-5">
+
+    <div class="col-8">
+        <h1>LISTE DES MODÈLES</h1>
+        <div class="row">
+            @foreach (var item in Model)
+            {
+                <div class="gallery col-lg-3 col-12">
+                    <a href="~/enfant/detail/@(item.Id)" style="text-decoration: none; color: white;">
+                        <img class="img-fluid blackBorder" src=@(item.ImageURL)  alt="Image du véhicule" /><br />                     
+                        <p class="nav-Bar"> @item.Nom </p>
+                    </a>
+                </div>
+            }
+        </div>
+    </div>
+
+    <div class="col-4">
+
+        <h2 class="p-2" style="background-color: rgb(173, 0, 0);">FILTRE DE RECHERCHE &nbsp;&nbsp;<i class="fa-sharp fa-solid fa-sliders"></i></h2>
+
+
+        <h4>Rechercher par mots-clés</h4>
+        <form action="https://www.w3schools.com/action_page.php" method="post">
+            <input type="text" id="motCle" name="motCle" placeholder="Saisir un mot-clé">
+            <h4> <br> Nombre de kilomêtrage</h4>
+            <div class="row">
+                <div class="col-6">
+                    <input type="number" id="min" name="minimum" placeholder="Min" step="1000">
+                </div>
+                <div class="col-6">
+                    <input type="number" id="max" name="maximum" placeholder="Max" step="1000">
+                </div>
+            </div>
+            <h4> <br> Modèles vedettes</h4>
+            <select name="choice" id="selection">
+                <option value="">--Please choose an option--</option>
+                <option value="oui">Oui</option>
+                <option value="non">Non</option>
+                <option value="peuImporte">Peu importe</option>
+            </select>
+            <h4> <br> Marques</h4>
+            <input type="checkbox" id="nissan" name="nissan" value="nissan">
+            <label for="nissan"> NISSAN</label><br>
+            <input type="checkbox" id="toyota" name="toyota" value="toyota">
+            <label for="toyota"> TOYOTA</label><br>
+            <input type="checkbox" id="honda" name="honda" value="honda">
+            <label for="honda"> HONDA</label><br><br>
+
+            <div class="row">
+                <div class="col-6">
+                    <button type="reset" class="btn btn-danger">EFFACER &nbsp;&nbsp;<i class="fa-sharp fa-solid fa-trash"></i> </button>
+                </div>
+                <div class="col-6">
+                    <button type="submit" class="btn btn-success">RECHERCHER &nbsp;&nbsp;<i class="fa-sharp fa-solid fa-magnifying-glass"></i> </button>
+                </div>
+            </div>
+        </form>
+
+        <!--fieldset est une autre façon d'entouré des éléments-->
+
+        <br>
+        <form>
+            <fieldset style="border:1px solid #999; border-radius:8px; box-shadow:0 0 8px #999;padding:6px;">
+                <legend style="text-align: left;">Do you like our website?</legend>
+                Yes
+                <input name="yes" type="radio" value="yes" />
+                No
+                <input name="no" type="radio" value="no" />
+            </fieldset>
+        </form>
+
+        <!--details cache du texte jusqu'a ce qu'on appuie dessus-->
+
+        <details>
+            <summary>Cliquez ici pour en savoir plus</summary>
+            <p>Ce site web a été créé par une seule personne dans le cadre du cours de programmation web Server.</p>
+        </details>
+    </div>
+</div>

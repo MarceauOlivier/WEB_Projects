@@ -1,0 +1,47 @@
+﻿@model Enfant
+
+<div class="row mt-5">
+    <div class="col text-center text-uppercase">
+        <h2> @Model.Nom</h2>
+    </div>
+</div>
+
+<div class="row mt-5">
+    <div class="col-6">
+        @if (Model.EstVedette)
+        {
+             <p class="vedette">MODÈLE VEDETTE</p>
+        }      
+        <img class="img-fluid" src=@Model.ImageURL alt="Photo du véhicule">
+
+        <form action="https://www.w3schools.com/action_page.php" method="post">
+            <input type="hidden" id="favouriteId" name="nom" value="@Model.Nom">
+            <button type="submit" class="btn btn-outline-success m-3">Add to favourites &nbsp;&nbsp;<i class="fa-sharp fa-solid fa-heart"></i> </button>
+        </form>
+
+    </div>
+    <div class="col-6">
+        <div>
+            <h4>
+               SPÉCIFICATION
+            </h4>
+        </div>
+
+        <table class="table-striped table">
+            <tbody>
+                 <tr><td>Maker</td><td>@Model.Parent.Nom</td></tr>
+                 <tr><td>Model</td><td>@Model.Model</td></tr>
+                <tr><td>Engine</td><td>@Model.Moteur</td></tr>
+                <tr><td>Doors</td><td>@Model.NbPorte</td></tr>
+                <tr><td>Km</td><td>@Model.Km Km</td></tr>
+                <tr><td>Color</td><td>@Model.Couleur</td></tr>                             
+                <tr><td>Horse Power</td><td>@Model.Hp hp</td></tr>
+            </tbody>
+        </table>
+        <div class="row ">
+            <p>
+                @Model.Description
+            </p>
+        </div>
+    </div>
+

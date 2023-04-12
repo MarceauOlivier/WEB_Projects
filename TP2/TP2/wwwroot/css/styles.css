@@ -1,0 +1,69 @@
+@charset "UTF-8";
+
+body{
+    background-image: url("/images/background.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    
+}
+
+.nav-Bar{
+    background-color: rgb(173, 0, 0);
+    border: 10px solid rgb(117, 0, 0);
+}
+
+.nav-Bar:hover{
+    background-color: rgb(116, 0, 0);
+    cursor: pointer;
+    color: rgb(78, 78, 78);
+}
+
+.logoItems{
+background-color: grey;
+border: 10px solid red;
+}
+
+.logoItems:hover{
+    background-color: rgb(116, 0, 0);
+    cursor: pointer;
+    color: rgb(78, 78, 78);
+    border: 10px solid rgb(37, 0, 0);
+}
+
+.vedette{
+    
+    border: 2px solid rgb(151, 129, 0);
+    border-radius: 25px;
+    color:  rgb(151, 129, 0);  
+    text-align: center;
+}
+
+.fav{
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 25px;
+    color:  rgb(0, 0, 0);  
+    text-align: center;
+}
+
+.gallery {     
+    text-align: center;    
+    margin: 10px;
+    padding: 0;
+}
+
+.blackBorder{
+    border: 2px solid rgb(0, 0, 0);  
+    text-align: center;  
+    padding: 0;
+    }
+
+fieldset {
+    margin:0;padding:0;border:solid
+}
+
+
+footer{
+    background-color: rgb(211, 211, 211);
+    height: 50px;
+}
