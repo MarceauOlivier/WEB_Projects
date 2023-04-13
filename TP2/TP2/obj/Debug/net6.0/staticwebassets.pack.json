@@ -1,71 +1,95 @@
 {
   "Files": [
     {
-      "Id": "C:\\Prog Project\\TP2\\TP2\\wwwroot\\css\\styles.css",
+      "Id": "C:\\Prog Project\\WEB_Projects\\TP2\\TP2\\wwwroot\\css\\styles.css",
       "PackagePath": "staticwebassets\\css\\styles.css"
     },
     {
-      "Id": "C:\\Prog Project\\TP2\\TP2\\wwwroot\\images\\180sx.jpg",
+      "Id": "C:\\Prog Project\\WEB_Projects\\TP2\\TP2\\wwwroot\\images\\180sx.jpg",
       "PackagePath": "staticwebassets\\images\\180sx.jpg"
     },
     {
-      "Id": "C:\\Prog Project\\TP2\\TP2\\wwwroot\\images\\300zx.jpg",
+      "Id": "C:\\Prog Project\\WEB_Projects\\TP2\\TP2\\wwwroot\\images\\300zx.jpg",
       "PackagePath": "staticwebassets\\images\\300zx.jpg"
     },
     {
-      "Id": "C:\\Prog Project\\TP2\\TP2\\wwwroot\\images\\ae86.jpg",
+      "Id": "C:\\Prog Project\\WEB_Projects\\TP2\\TP2\\wwwroot\\images\\ae86.jpg",
       "PackagePath": "staticwebassets\\images\\ae86.jpg"
     },
     {
-      "Id": "C:\\Prog Project\\TP2\\TP2\\wwwroot\\images\\background.jpg",
+      "Id": "C:\\Prog Project\\WEB_Projects\\TP2\\TP2\\wwwroot\\images\\background.jpg",
       "PackagePath": "staticwebassets\\images\\background.jpg"
     },
     {
-      "Id": "C:\\Prog Project\\TP2\\TP2\\wwwroot\\images\\caroussel2.jpg",
+      "Id": "C:\\Prog Project\\WEB_Projects\\TP2\\TP2\\wwwroot\\images\\beat.jpg",
+      "PackagePath": "staticwebassets\\images\\beat.jpg"
+    },
+    {
+      "Id": "C:\\Prog Project\\WEB_Projects\\TP2\\TP2\\wwwroot\\images\\caroussel2.jpg",
       "PackagePath": "staticwebassets\\images\\caroussel2.jpg"
     },
     {
-      "Id": "C:\\Prog Project\\TP2\\TP2\\wwwroot\\images\\caroussel3.jpg",
+      "Id": "C:\\Prog Project\\WEB_Projects\\TP2\\TP2\\wwwroot\\images\\caroussel3.jpg",
       "PackagePath": "staticwebassets\\images\\caroussel3.jpg"
     },
     {
-      "Id": "C:\\Prog Project\\TP2\\TP2\\wwwroot\\images\\carrousel1.jpg",
+      "Id": "C:\\Prog Project\\WEB_Projects\\TP2\\TP2\\wwwroot\\images\\carrousel1.jpg",
       "PackagePath": "staticwebassets\\images\\carrousel1.jpg"
     },
     {
-      "Id": "C:\\Prog Project\\TP2\\TP2\\wwwroot\\images\\carroussel4.png",
+      "Id": "C:\\Prog Project\\WEB_Projects\\TP2\\TP2\\wwwroot\\images\\carroussel4.png",
       "PackagePath": "staticwebassets\\images\\carroussel4.png"
     },
     {
-      "Id": "C:\\Prog Project\\TP2\\TP2\\wwwroot\\images\\japon.png",
+      "Id": "C:\\Prog Project\\WEB_Projects\\TP2\\TP2\\wwwroot\\images\\chaser.jpg",
+      "PackagePath": "staticwebassets\\images\\chaser.jpg"
+    },
+    {
+      "Id": "C:\\Prog Project\\WEB_Projects\\TP2\\TP2\\wwwroot\\images\\crx.jpg",
+      "PackagePath": "staticwebassets\\images\\crx.jpg"
+    },
+    {
+      "Id": "C:\\Prog Project\\WEB_Projects\\TP2\\TP2\\wwwroot\\images\\integra.jpg",
+      "PackagePath": "staticwebassets\\images\\integra.jpg"
+    },
+    {
+      "Id": "C:\\Prog Project\\WEB_Projects\\TP2\\TP2\\wwwroot\\images\\japon.png",
       "PackagePath": "staticwebassets\\images\\japon.png"
     },
     {
-      "Id": "C:\\Prog Project\\TP2\\TP2\\wwwroot\\images\\jdmBackground.png",
+      "Id": "C:\\Prog Project\\WEB_Projects\\TP2\\TP2\\wwwroot\\images\\jdmBackground.png",
       "PackagePath": "staticwebassets\\images\\jdmBackground.png"
     },
     {
-      "Id": "C:\\Prog Project\\TP2\\TP2\\wwwroot\\images\\logoHonda.png",
+      "Id": "C:\\Prog Project\\WEB_Projects\\TP2\\TP2\\wwwroot\\images\\logoHonda.png",
       "PackagePath": "staticwebassets\\images\\logoHonda.png"
     },
     {
-      "Id": "C:\\Prog Project\\TP2\\TP2\\wwwroot\\images\\logoNissan.png",
+      "Id": "C:\\Prog Project\\WEB_Projects\\TP2\\TP2\\wwwroot\\images\\logoNissan.png",
       "PackagePath": "staticwebassets\\images\\logoNissan.png"
     },
     {
-      "Id": "C:\\Prog Project\\TP2\\TP2\\wwwroot\\images\\logoToyota.png",
+      "Id": "C:\\Prog Project\\WEB_Projects\\TP2\\TP2\\wwwroot\\images\\logoToyota.png",
       "PackagePath": "staticwebassets\\images\\logoToyota.png"
     },
     {
-      "Id": "C:\\Prog Project\\TP2\\TP2\\wwwroot\\images\\s15.jpg",
+      "Id": "C:\\Prog Project\\WEB_Projects\\TP2\\TP2\\wwwroot\\images\\mr2.jpg",
+      "PackagePath": "staticwebassets\\images\\mr2.jpg"
+    },
+    {
+      "Id": "C:\\Prog Project\\WEB_Projects\\TP2\\TP2\\wwwroot\\images\\nsx.jpg",
+      "PackagePath": "staticwebassets\\images\\nsx.jpg"
+    },
+    {
+      "Id": "C:\\Prog Project\\WEB_Projects\\TP2\\TP2\\wwwroot\\images\\s15.jpg",
       "PackagePath": "staticwebassets\\images\\s15.jpg"
     },
     {
-      "Id": "C:\\Prog Project\\TP2\\TP2\\wwwroot\\images\\skylineR32.jpg",
+      "Id": "C:\\Prog Project\\WEB_Projects\\TP2\\TP2\\wwwroot\\images\\skylineR32.jpg",
       "PackagePath": "staticwebassets\\images\\skylineR32.jpg"
     },
     {
-      "Id": "C:\\Prog Project\\TP2\\TP2\\wwwroot\\images\\supra.jpg",
+      "Id": "C:\\Prog Project\\WEB_Projects\\TP2\\TP2\\wwwroot\\images\\supra.jpg",
       "PackagePath": "staticwebassets\\images\\supra.jpg"
     },
     {

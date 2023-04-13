@@ -3,7 +3,8 @@
 namespace TP2.Controllers
 {
     public class FavorisController : Controller
-    {
+    {       
+        [Route("/favoris")]
         public IActionResult Index()
         {
             return View();

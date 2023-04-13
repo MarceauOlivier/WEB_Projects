@@ -13,10 +13,11 @@ namespace TP2.Controllers
             _database = Database;
         }
 
-
+        [Route("")]       
+        [Route("/home")]
         public ActionResult Index()
         {
-            return View(_database.Parents.ToList());
+            return View("index", _database.Parents.ToList());
         }
     }
 }
