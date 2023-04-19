@@ -5,6 +5,12 @@
     <div class="col-8">
         <h1>LISTE DES MODÈLES</h1>
         <div class="row">
+
+            @if (Model.Resultat.Count() == 0)
+            {
+                <h2>Sorry :( Aucun véhicule correspond à vos critères</h2>
+            }
+
             @foreach (var item in Model.Resultat)
             {
                 <div class="gallery col-lg-3 col-12">
@@ -23,7 +29,7 @@
 
 
         <h4>Rechercher par mots-clés</h4>
-        <form action="https://www.w3schools.com/action_page.php" method="post">
+        <form action="~/enfant/filtrer" method="get">
             <input type="text" id="motCle" name="MotsCles" placeholder="Saisir un mot-clé" value="@Model.Criteres.MotsCles">
             <h4> <br> Nombre de kilomêtrage</h4>
             <div class="row">
@@ -76,7 +82,7 @@
             }          
             <label for="nissan"> NISSAN</label><br>
 
-            @if (Model.Criteres.EstUnNissan)
+            @if (Model.Criteres.EstUnToyota)
             {
                  <input type="checkbox" checked name="EstUnToyota" value="true" class="form-check-input">
             }
@@ -86,7 +92,7 @@
             }              
             <label for="toyota"> TOYOTA</label><br>
 
-            @if (Model.Criteres.EstUnNissan)
+            @if (Model.Criteres.EstUnHonda)
             {
                  <input type="checkbox" checked name="EstUnHonda" value="true" class="form-check-input">
             }

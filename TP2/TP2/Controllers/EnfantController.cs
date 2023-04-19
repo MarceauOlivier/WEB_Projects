@@ -60,5 +60,55 @@ namespace TP2.Controllers
                 return View("Detail", enfantRecherché);
             }
         }
+
+        [Route("enfant/filtrer")]     
+        public ActionResult Filtrer(CritereRechercheViewModel criteres)
+        {
+            IEnumerable<Enfant> donnees = _database.Enfants;
+
+            if (!criteres.EstUnNissan)
+            {
+                donnees = donnees.Where(e => e.Parent.Nom != "Nissan");
+            }
+            if (!criteres.EstUnToyota)
+            {
+                donnees = donnees.Where(e => e.Parent.Nom != "Toyota");
+            }
+            if (!criteres.EstUnHonda)
+            {
+                donnees = donnees.Where(e => e.Parent.Nom != "Honda");
+            }
+
+            if (criteres.MinNbKilo != null)
+            {
+                donnees = donnees.Where(e => e.Km > criteres.MinNbKilo);
+            }
+
+            if (criteres.MaxNbKilo != null)
+            {
+                donnees = donnees.Where(e => e.Km < criteres.MaxNbKilo);
+            }
+
+            if (criteres.ChoixPourModelVedette == "Oui")
+            {
+                donnees = donnees.Where(e => e.EstVedette == true);
+            }
+            else if (criteres.ChoixPourModelVedette == "Non")
+            {
+                donnees = donnees.Where(e => e.EstVedette == false);
+            }
+            else
+            {
+                donnees = donnees.Where(e => e.EstVedette == true || e.EstVedette == false);
+            }
+
+            PageRechercheViewModel pageRechercheViewModel = new PageRechercheViewModel();
+
+            pageRechercheViewModel.Criteres = criteres;
+
+            pageRechercheViewModel.Resultat = donnees.ToList();
+           
+            return View("Recherche", pageRechercheViewModel);
+        }
     }
 }
