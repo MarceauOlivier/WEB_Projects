@@ -13,10 +13,13 @@
 
             @foreach (var item in Model.Resultat)
             {
-                <div class="gallery col-lg-3 col-12">
+                <div class="gallery col-lg-3 col-12 m-3">                 
                     <a href="~/enfant/detail/@(item.Id)" style="text-decoration: none; color: white;">
-                        <img class="img-fluid blackBorder" src=@(item.ImageURL)  alt="Image du véhicule" /><br />                     
-                        <p class="nav-Bar"> @item.Nom </p>
+                        <img class="img-fluid blackBorder" src=@(item.ImageURL) alt="Image du véhicule" /><br />
+                        <p class="nav-Bar"> @item.Nom </p>                      
+                    </a>         
+                     <a href="~/GestionEnfant/delete/@(item.Id)"  style="text-decoration: none; color: white;">
+                            <p class="boutonSup"> Supprimer &nbsp;&nbsp; <i class="fa-sharp fa-solid fa-trash"></i> </p>       
                     </a>
                 </div>
             }

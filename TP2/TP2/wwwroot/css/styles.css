@@ -31,6 +31,18 @@ border: 10px solid red;
     border: 10px solid rgb(37, 0, 0);
 }
 
+.boutonSup {
+    background-color: dimgrey;
+    border: 2px solid rgb(0, 0, 0);
+    margin-bottom 0;
+}
+
+.boutonSup:hover {
+    background-color: rgb(78, 78, 78);
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+}
+
 .vedette{
     
     border: 2px solid rgb(151, 129, 0);
@@ -46,9 +58,8 @@ border: 10px solid red;
     text-align: center;
 }
 
-.gallery {     
-    text-align: center;    
-    margin: 10px;
+.gallery {
+    text-align: center;
     padding: 0;
 }
 
@@ -66,4 +77,8 @@ fieldset {
 footer{
     background-color: rgb(211, 211, 211);
     height: 50px;
+}
+
+p{
+    margin:0;
 }
