@@ -34,7 +34,7 @@ border: 10px solid red;
 .boutonSup {
     background-color: dimgrey;
     border: 2px solid rgb(0, 0, 0);
-    margin-bottom 0;
+    margin-bottom: 0;
 }
 
 .boutonSup:hover {

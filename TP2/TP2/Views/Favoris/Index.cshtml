@@ -1,11 +1,13 @@
-﻿<div class="row mt-5">
+﻿@model List<TP2.Models.Enfant>;
+
+<div class="row mt-5">
     <div class="col text-center text-uppercase">
         <h2>YOUR FAVOURITE CARS</h2>
     </div>
 </div>
 
 <div class="row mt-5">
-    <p class="fav">VOUS AVEZ<span style="color: red;"> 4 </span>MODÈLES FAVORIS!</p>
+    <p class="fav">VOUS AVEZ<span style="color: red;"> @Model.Count() </span>MODÈLES FAVORIS!</p>
 </div>
 
 <div class="row mt-5">
@@ -14,6 +16,11 @@
             <tr><th>IMAGE</th><th>MODÈLE</th><th>MARQUE</th><th>KILOMETRAGE</th><th></th></tr>
         </thead>
         <tbody>
+
+
+            @*pour chaque élément faire un for each*@
+
+
             <tr>
                 <td>   <img class="img-fluid" style="width: 200px;" src="images/skylineR32.jpg" alt="Nissan skyline r32"></td>
                 <td> <a href="~/enfant/detail/1" style="text-decoration: none; color: black;">SKYLINE</a></td>
@@ -26,6 +33,8 @@
                     </form>
                 </td>
             </tr>
+
+
             <tr>
                 <td>   <img class="img-fluid" style="width: 200px;" src="images/180sx.jpg" alt="Nissan skyline r32"></td>
                 <td> <a href="~/enfant/detail/1" style="text-decoration: none; color: black;">180SX</a></td>
@@ -38,6 +47,9 @@
                     </form>
                 </td>
             </tr>
+
+
+
             <tr>
                 <td>   <img class="img-fluid" style="width: 200px;" src="images/300zx.jpg" alt="Nissan skyline r32"></td>
                 <td> <a href="~/enfant/detail/1" style="text-decoration: none; color: black;">300ZX</a></td>
@@ -50,6 +62,9 @@
                     </form>
                 </td>
             </tr>
+
+
+
             <tr>
                 <td>   <img class="img-fluid" style="width: 200px;" src="images/s15.jpg" alt="Nissan skyline r32"></td>
                 <td> <a href="~/enfant/detail/1" style="text-decoration: none; color: black;">SILVIA S15</a></td>
@@ -62,6 +77,10 @@
                     </form>
                 </td>
             </tr>
+
+
+
+
         </tbody>
     </table>
 </div>

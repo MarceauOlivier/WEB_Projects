@@ -17,7 +17,15 @@ namespace TP2.Controllers
         // GET: GestionEnfantController/Delete/5
         public ActionResult Delete(int id)
         {
-            return View();
+            var enfantRecherché = _database.Enfants.Where(p => p.Id == id).SingleOrDefault();
+            if (enfantRecherché == null)
+            {
+                return View("NotFound", "Le numéro de l'enfant demandé n'a pas été trouvé!");
+            }
+            else
+            {
+                return View("Delete", enfantRecherché);
+            }
         }
 
         // POST: GestionEnfantController/Delete/5
@@ -27,7 +35,10 @@ namespace TP2.Controllers
         {
             try
             {
-                return RedirectToAction(nameof(Index));
+                var enfantRecherché = _database.Enfants.Where(p => p.Id == id).SingleOrDefault();
+                enfantRecherché.Parent.Enfants.Remove(enfantRecherché);
+                _database.Enfants.Remove(enfantRecherché);
+                return RedirectToAction("Index", "Home");
             }
             catch
             {

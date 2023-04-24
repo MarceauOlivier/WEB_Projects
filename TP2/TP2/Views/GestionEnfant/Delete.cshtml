@@ -1,4 +1,4 @@
-﻿@model TP2.Models.Enfant
+﻿@model Enfant
 
 @{
     ViewData["Title"] = "Delete";
@@ -6,7 +6,7 @@
 
 <h1>Supprimer une voiture</h1>
 
-<h3>Êtes-vous certain de vouloir supprimer</h3>
+<h3>Êtes-vous certain de vouloir supprimer ?</h3>
 <div>
     <h4>Enfant</h4>
     <hr />
@@ -15,7 +15,7 @@
             @Html.DisplayNameFor(model => model.Id)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Id)
+            @Html.DisplayFor(model => model.Id) 
         </dd>
       
         <dt class = "col-sm-2">
@@ -28,11 +28,11 @@
         <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.ImageURL)
         </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.ImageURL)
+        <dd class = "col-sm-10">          
+            <img class="img-fluid" src=@Model.ImageURL alt="Photo du véhicule">
         </dd>     
-    
-    <form asp-action="Supprimer">
-        <input type="submit" value="Delete" class="btn btn-danger" /> |
+    </dl>
+    <form asp-action="Delete">
+        <input type="submit" value="Supprimer" class="btn btn-danger" /> 
     </form>
 </div>
