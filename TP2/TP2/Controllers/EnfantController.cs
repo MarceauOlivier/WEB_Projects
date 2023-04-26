@@ -79,6 +79,11 @@ namespace TP2.Controllers
                 donnees = donnees.Where(e => e.Parent.Nom != "Honda");
             }
 
+            if (criteres.MotsCles != null)
+            {
+                donnees = donnees.Where(e => e.Nom.ToUpper().Contains(criteres.MotsCles.ToUpper()));
+            }
+
             if (criteres.MinNbKilo != null)
             {
                 donnees = donnees.Where(e => e.Km > criteres.MinNbKilo);
