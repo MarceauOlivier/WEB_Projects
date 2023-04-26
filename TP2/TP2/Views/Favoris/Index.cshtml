@@ -1,4 +1,6 @@
-﻿@model List<TP2.Models.Enfant>;
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@model List<TP2.Models.Enfant>;
+ 
 
 <div class="row mt-5">
     <div class="col text-center text-uppercase">
@@ -17,69 +19,21 @@
         </thead>
         <tbody>
 
-
-            @*pour chaque élément faire un for each*@
-
-
-            <tr>
-                <td>   <img class="img-fluid" style="width: 200px;" src="images/skylineR32.jpg" alt="Nissan skyline r32"></td>
-                <td> <a href="~/enfant/detail/1" style="text-decoration: none; color: black;">SKYLINE</a></td>
-                <td>NISSAN</td>
-                <td>39 000 km</td>
-                <td>
-                    <form action="https://www.w3schools.com/action_page.php" method="post">
-                        <input type="hidden" id="favouriteId" name="nom" value="skyline">
-                        <button type="submit" class="btn btn-danger">Remove &nbsp;&nbsp;<i class="fa-sharp fa-solid fa-trash"></i> </button>
-                    </form>
-                </td>
-            </tr>
-
-
-            <tr>
-                <td>   <img class="img-fluid" style="width: 200px;" src="images/180sx.jpg" alt="Nissan skyline r32"></td>
-                <td> <a href="~/enfant/detail/1" style="text-decoration: none; color: black;">180SX</a></td>
-                <td>NISSAN</td>
-                <td>67 000 km</td>
-                <td>
-                    <form action="https://www.w3schools.com/action_page.php" method="post">
-                        <input type="hidden" id="favouriteId" name="nom" value="180sx">
-                        <button type="submit" class="btn btn-danger">Remove &nbsp;&nbsp;<i class="fa-sharp fa-solid fa-trash"></i> </button>
-                    </form>
-                </td>
-            </tr>
-
-
-
-            <tr>
-                <td>   <img class="img-fluid" style="width: 200px;" src="images/300zx.jpg" alt="Nissan skyline r32"></td>
-                <td> <a href="~/enfant/detail/1" style="text-decoration: none; color: black;">300ZX</a></td>
-                <td>NISSAN</td>
-                <td>98 000 km</td>
-                <td>
-                    <form action="https://www.w3schools.com/action_page.php" method="post">
-                        <input type="hidden" id="favouriteId" name="nom" value="300zx">
-                        <button type="submit" class="btn btn-danger">Remove &nbsp;&nbsp;<i class="fa-sharp fa-solid fa-trash"></i> </button>
-                    </form>
-                </td>
-            </tr>
-
-
-
-            <tr>
-                <td>   <img class="img-fluid" style="width: 200px;" src="images/s15.jpg" alt="Nissan skyline r32"></td>
-                <td> <a href="~/enfant/detail/1" style="text-decoration: none; color: black;">SILVIA S15</a></td>
-                <td>NISSAN</td>
-                <td>27 000 km</td>
-                <td>
-                    <form action="https://www.w3schools.com/action_page.php" method="post">
-                        <input type="hidden" id="favouriteId" name="nom" value="s15">
-                        <button type="submit" class="btn btn-danger">Remove &nbsp;&nbsp;<i class="fa-sharp fa-solid fa-trash"></i> </button>
-                    </form>
-                </td>
-            </tr>
-
-
-
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>   <img class="img-fluid" style="width: 200px;" src="@(item.ImageURL)" alt="Image du véhicule"></td>
+                    <td> <a href="~/enfant/detail/@(item.Id)" style="text-decoration: none; color: black;">@item.Nom</a></td>
+                    <td>@item.Parent.Nom</td>
+                    <td>@item.Km km</td>
+                    <td>
+                        <form action="~/favoris/SupprimerUnEnfant" method="post">
+                            <input type="hidden" name="id" value="@item.Id">
+                            <button type="submit" class="btn btn-danger">Remove &nbsp;&nbsp;<i class="fa-sharp fa-solid fa-trash"></i> </button>
+                        </form>
+                    </td>
+                </tr>
+            }
 
         </tbody>
     </table>

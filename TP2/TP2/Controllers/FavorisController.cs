@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
 using TP2.Models;
 
 namespace TP2.Controllers
@@ -15,33 +16,52 @@ namespace TP2.Controllers
         [Route("/favoris")]
         public IActionResult Index()
         {
-            return View(_database.Enfants.Take(3).ToList());
+            var enfantIDs = HttpContext.Session.Get<List<int>>("enfantIDs");
+            if (enfantIDs == null)
+            {
+                enfantIDs = new List<int>();
+            }
+
+            var enfantsDeLaBD = _database.Enfants.Where(e => enfantIDs.Contains(e.Id)).ToList();
+
+            return View(enfantsDeLaBD);
         }
 
         public ActionResult AjouterUnEnfant(int id)
         {
-            var enfantRecherché = _database.Enfants.Where(p => p.Id == id).SingleOrDefault();
-            if (enfantRecherché == null)
+            var enfantIDs = HttpContext.Session.Get<List<int>>("enfantIDs");
+            if (enfantIDs == null)
             {
-                return View("NotFound", "Le numéro de l'enfant demandé n'a pas été trouvé!");
+                enfantIDs = new List<int>();
             }
-            else
+
+            if (!enfantIDs.Contains(id))
             {
-                return View("Detail", enfantRecherché);
+              enfantIDs.Add(id);
             }
+
+            var enfantsDeLaBD = _database.Enfants.Where(e => enfantIDs.Contains(e.Id)).ToList();
+
+            HttpContext.Session.Set<List<int>>("enfantIDs", enfantIDs);
+
+            return View("Index", enfantsDeLaBD);
         }
 
         public ActionResult SupprimerUnEnfant(int id)
         {
-            var enfantRecherché = _database.Enfants.Where(p => p.Id == id).SingleOrDefault();
-            if (enfantRecherché == null)
+            var enfantIDs = HttpContext.Session.Get<List<int>>("enfantIDs");
+            if (enfantIDs == null)
             {
-                return View("NotFound", "Le numéro de l'enfant demandé n'a pas été trouvé!");
+                enfantIDs = new List<int>();
             }
-            else
-            {
-                return View("Detail", enfantRecherché);
-            }
+
+            enfantIDs.Remove(id);
+
+            var enfantsDeLaBD = _database.Enfants.Where(e => enfantIDs.Contains(e.Id)).ToList();
+
+            HttpContext.Session.Set<List<int>>("enfantIDs", enfantIDs);
+
+            return View("Index", enfantsDeLaBD);
         }
     }
 }
